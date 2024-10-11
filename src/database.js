@@ -3,14 +3,11 @@ export function uniqueId() {
 }
 
 export const EventQueue = {
-    /**
-     * @type {[string, (payload: any) => void]}
-     */
     listeners: [],
     /**
      * @param {string} collectionName
      * @param {string} trigger
-     * @param {(payload) => void} cb 
+     * @param {any} cb 
      */
     register: (collectionName, trigger, cb) => {
         EventQueue.listeners.push([collectionName+"."+ trigger, cb]);
@@ -66,24 +63,20 @@ export function getDocument(collection, $id) {
 export const Query = {
     /**
      * @param {number} limit 
-     * @returns {string}
      */
     limit: (limit) => [0, "limit", limit],
     /**
      * @param {number} after
-     * @returns {string}
      */
     after: (after) => [0, "after", after],
     /**
      * @param {string} field the collections field
      * @param {string} query the collections query
-     * @returns {string}
      */
     search: (field, query) => [1, "query", field, query],
     /**
      * @param {string} field 
      * @param {string} eq 
-     * @returns 
      */
     equal: (field, eq) => [2, "equal", field, eq],
 }

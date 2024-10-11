@@ -32,14 +32,14 @@ const App = {
     endpoints: [],
     /**
      * @param {string} path
-     * @param {(request, response) => Promise<any>} cb
+     * @param {any} cb
      */
     post: (path, cb) => {
         App.endpoints.push(["POST", path, cb]);
     },
     /**
      * @param {string} path 
-     * @param {(request: ClientRequest) => Promise<any>} cb
+     * @param {any} cb
      */
     get: (path, cb) => {
         App.endpoints.push(["GET", path, cb]);
