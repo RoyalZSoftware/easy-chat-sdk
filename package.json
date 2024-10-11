@@ -1,0 +1,22 @@
+{
+  "name": "easy-chat-sdk",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "## Features - create chat rooms - create messages for chat rooms - add [users](#users) - notify users via websockets",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/start.js",
+    "test": "./bin/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/royalzsoftware/easy-chat-sdk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/royalzsoftware/easy-chat-sdk/issues"
+  },
+  "homepage": "https://github.com/royalzsoftware/easy-chat-sdk#readme"
+}
